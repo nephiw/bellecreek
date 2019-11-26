@@ -14,5 +14,11 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ]
+  ],
+  "paths": {
+    "@test/*": ["src/test/*"],
+    "@app/*": ["src/app/*"],
+    "@core/*": ["src/app/core/*"],
+    "@lib/*": ["src/app/shared/*"]
+  }
 }

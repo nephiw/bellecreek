@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body 
+  margin: 0
+  padding: 0
+
+html
+  height: 100vh
+
+// There are two tool bar rows per page  
+mat-sidenav-container
+  height: 86vh !important
+
+mat-toolbar-row
+  height: 7vh !important
+
+@media only screen and (orientation: landscape)
+  mat-sidenav-container
+    height: 76vh !important
+
+  mat-toolbar-row
+    height: 14vh !important
