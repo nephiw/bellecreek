@@ -5,7 +5,7 @@ import { filter, map } from 'rxjs/operators';
 @Component({
   selector: 'bc-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.sass']
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
   public viewTitle$ = this.router.events.pipe(
