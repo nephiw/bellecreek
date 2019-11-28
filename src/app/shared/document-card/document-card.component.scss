@@ -1,0 +1,21 @@
+.download-icon {
+  max-width: 100px;
+}
+
+mat-card-header {
+  margin: 0 -16px;
+}
+
+[mat-button] {
+  cursor: pointer;
+}
+
+mat-card {
+  height: 92%;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

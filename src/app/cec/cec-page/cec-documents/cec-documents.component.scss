@@ -1,0 +1,29 @@
+section {
+  background-color: grey;
+}
+
+.documents-row {
+  display: flex;
+  justify-items: space-between;
+}
+
+.document {
+  flex: 1 0;
+  min-height: 200px;
+  padding: 10px;
+}
+
+.documents-row > .document:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 980px) {
+  .document {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .documents-row {
+    display: block;
+  }
+}

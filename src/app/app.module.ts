@@ -10,10 +10,7 @@ import { CoreModule } from '@core/core.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LandingPageComponent
-  ],
+  declarations: [AppComponent, LandingPageComponent],
   imports: [
     BrowserModule,
     RouterModule,
@@ -21,7 +18,11 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     CoreModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'Window', useFactory: () => window },
+    { provide: 'Document', useFactory: () => document },
+    { provide: 'Navigator', useFactory: () => window.navigator }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

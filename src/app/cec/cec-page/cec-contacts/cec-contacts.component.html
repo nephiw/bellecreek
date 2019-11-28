@@ -1,0 +1,16 @@
+<section id="cec-contacts">
+  <div class="element-container">
+    <h2>CEC Contacts</h2>
+    <div class="contacts-container">
+      <div class="contact" *ngFor="let contact of contacts">
+        <bc-contact-card [contact]="contact"></bc-contact-card>
+      </div>
+      <div class="contact">
+        <bc-contact-group-card
+          [group]="committee"
+          groupName="Covenant Enforcement Committee Resident Members"
+        ></bc-contact-group-card>
+      </div>
+    </div>
+  </div>
+</section>

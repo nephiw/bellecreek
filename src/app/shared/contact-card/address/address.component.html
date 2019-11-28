@@ -1,0 +1,8 @@
+<div class="address">
+  <img src="/assets/icons/google-maps.svg" />
+  <a [href]="getMapLink(contact)" target="maps">
+    <div class="component" *ngFor="let part of contact.address">
+      {{ part }}
+    </div>
+  </a>
+</div>

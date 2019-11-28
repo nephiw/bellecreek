@@ -6,22 +6,21 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-$bc-primary-palette: $mat-blue-grey;
 $bc-accent-palette: (
-   50: #FFF3E0,
-  100: #FFE0B2,
-  200: #FFCC80,
-  300: #FFB74D,
-  400: #FFA726,
-  500: #FF9800,
-  600: #FB8C00,
-  700: #F57C00,
-  800: #EF6C00,
-  900: #E65100,
- A100: #FFD180,
- A200: #FFAB40,
- A400: #FF9100,
- A700: #FF6D00,
+  50: #fff3e0,
+  100: #ffe0b2,
+  200: #ffcc80,
+  300: #ffb74d,
+  400: #ffa726,
+  500: #ff9800,
+  600: #fb8c00,
+  700: #f57c00,
+  800: #ef6c00,
+  900: #e65100,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -36,15 +35,15 @@ $bc-accent-palette: (
     A100: $dark-primary-text,
     A200: $dark-primary-text,
     A400: $dark-primary-text,
-    A700: $light-primary-text,
+    A700: $light-primary-text
   )
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$bc-theme-primary: mat-palette($bc-primary-palette);
-$bc-theme-accent:  mat-palette($bc-accent-palette, A200, A100, A400);
+$bc-theme-primary: mat-palette($mat-blue-grey);
+$bc-theme-accent: mat-palette($bc-accent-palette, A200, A100, A400);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $bc-theme: mat-light-theme($bc-theme-primary, $bc-theme-accent);
@@ -53,6 +52,8 @@ $bc-theme: mat-light-theme($bc-theme-primary, $bc-theme-accent);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($bc-theme);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 // customization after this line of things like layout happen after this line.
 body {
@@ -64,7 +65,7 @@ html {
   height: 100vh;
 }
 
-// There are two tool bar rows per page  
+// There are two tool bar rows per page
 mat-sidenav-container {
   height: 86vh !important;
 }

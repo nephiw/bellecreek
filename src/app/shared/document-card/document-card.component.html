@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p><ng-content></ng-content></p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="button-container">
+      <button
+        mat-button
+        *ngFor="let dl of downloads"
+        (click)="download(dl.path)"
+      >
+        <img
+          [src]="getSource(dl.type)"
+          class="download-icon"
+          alt="download as a {{ dl.type }} document"
+        />
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,20 @@
+.contacts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact {
+  width: 50%;
+  padding: 15px;
+}
+
+@media (max-width: 960px) {
+  .contacts-container {
+    display: block;
+  }
+
+  .contact {
+    width: auto;
+  }
+}

@@ -1,0 +1,12 @@
+<section id="cec-documents">
+  <div class="element-container">
+    <h2>Documents</h2>
+    <div class="documents-row">
+      <div class="document" *ngFor="let doc of documents">
+        <bc-document-card [title]="doc.title" [downloads]="doc.downloads" >
+          {{ doc.description }}
+        </bc-document-card>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ contact | contactName }}</mat-card-title>
+    <mat-card-subtitle>{{ contact.position }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="contact-chips">
+      <mat-chip-list class="contact-details">
+        <mat-chip class="phone">
+          <a href="tel:+1-{{ contact.phone }}" target="phone" color="accent">{{
+            contact.phone
+          }}</a>
+        </mat-chip>
+        <mat-chip
+          *ngFor="let email of contact.emails"
+          class="email"
+          color="accent"
+        >
+          <a
+            href="mailto:{{ email }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ email }}</a
+          >
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+    <bc-simple-address [contact]="contact"></bc-simple-address>
+  </mat-card-content>
+</mat-card>
