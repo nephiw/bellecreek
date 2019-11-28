@@ -20,12 +20,6 @@ const routes: Routes = [
     data: { title: 'Community Event / Meetings' },
     loadChildren: () =>
       import('./events/events.module').then(m => m.EventsModule)
-  },
-  {
-    path: 'contact',
-    data: { title: 'Contact Us' },
-    loadChildren: () =>
-      import('./contact/contact.module').then(m => m.ContactModule)
   }
 ];
 
