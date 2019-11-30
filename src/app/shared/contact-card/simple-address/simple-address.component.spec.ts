@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SimpleAddressComponent } from './simple-address.component';
+import { Contact } from '../contact-card.component';
 
 describe('SimpleAddressComponent', () => {
   let component: SimpleAddressComponent;
@@ -16,6 +17,7 @@ describe('SimpleAddressComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SimpleAddressComponent);
     component = fixture.componentInstance;
+    component.contact = { address: [] } as unknown as Contact;
     fixture.detectChanges();
   });
 

@@ -9,6 +9,12 @@ import { LandingPageComponent } from '@core/landing-page';
 import { CoreModule } from '@core/core.module';
 import { RouterModule } from '@angular/router';
 
+const dateBuilder = {
+  build: (params?: any) => {
+    return params ? new Date(params) : new Date();
+  }
+};
+
 @NgModule({
   declarations: [AppComponent, LandingPageComponent],
   imports: [
@@ -21,8 +27,9 @@ import { RouterModule } from '@angular/router';
   providers: [
     { provide: 'Window', useFactory: () => window },
     { provide: 'Document', useFactory: () => document },
-    { provide: 'Navigator', useFactory: () => window.navigator }
+    { provide: 'DateBuilder', useValue: dateBuilder }
   ],
+  exports: [CoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -11,7 +11,7 @@ export class DocumentService {
   */
   public downloadFile(path: string): Promise<boolean> {
     // This helps avoid crossdomain errors when watching a popup.
-    path = path.charAt(0) === '/' ? path : `/path`;
+    path = path.charAt(0) === '/' ? path : `/${path}`;
     const { location } = this.window;
     const host = location.hostname;
     const protocol = location.protocol;
@@ -26,11 +26,11 @@ export class DocumentService {
     }
     return new Promise(resolve => {
       try {
-        docWindow.addEventListener('load', resolve.bind(true));
-        docWindow.addEventListener('error', resolve.bind(false));
+        docWindow.addEventListener('load', resolve.bind(null, true));
+        docWindow.addEventListener('error', resolve.bind(null, false));
       } catch (err) {
         // sometimes we get a crossorigin error despite being part of the same domain.
-        return Promise.resolve(false);
+        resolve(false);
       }
     });
   }

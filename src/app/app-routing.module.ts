@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: 'cec',
     data: { title: 'CEC / HOA' },
-    loadChildren: () => import('./cec/cec.module').then(m => m.CecModule)
+    loadChildren: () =>
+      import('./cec/cec.module').then(m => m.CecModule)
   },
   {
     path: 'district',

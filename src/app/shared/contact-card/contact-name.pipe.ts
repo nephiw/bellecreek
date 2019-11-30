@@ -6,7 +6,7 @@ import { Contact } from './contact-card.component';
 })
 export class ContactNamePipe implements PipeTransform {
   transform(value: Contact): any {
-    if (!value || !value.firstName || !value.lastName) {
+    if (!value || !value.firstName) {
       return '';
     }
 

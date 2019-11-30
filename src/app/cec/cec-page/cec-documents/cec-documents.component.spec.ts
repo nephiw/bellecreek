@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MockComponents } from 'ng-mocks';
 import { CecDocumentsComponent } from './cec-documents.component';
+import { DocumentCardComponent } from '@app/shared/document-card';
+
 
 describe('CecDocumentsComponent', () => {
   let component: CecDocumentsComponent;
@@ -8,7 +10,7 @@ describe('CecDocumentsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CecDocumentsComponent ]
+      declarations: [ CecDocumentsComponent, MockComponents(DocumentCardComponent) ]
     })
     .compileComponents();
   }));

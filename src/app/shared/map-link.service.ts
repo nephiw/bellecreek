@@ -2,10 +2,10 @@ import { Injectable, Inject } from '@angular/core';
 
 @Injectable()
 export class MapLinkService {
-  constructor(@Inject('Navigator') private readonly navigator: Navigator) {}
+  constructor(@Inject('Window') private readonly window: Window) {}
 
   public getMapUri(address: string): string {
-    const { platform } = this.navigator;
+    const { platform } = this.window.navigator;
     let protocol: string;
     if (
       platform.indexOf('iPhone') !== -1 ||

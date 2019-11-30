@@ -6,6 +6,8 @@
 1. ~~Update the navigation to be responsive~~
 1. ~~Import and start using Angular Material~~
 1. Set up the open graph metadata *per page* - drive more HOA traffic to the CEC page directly.
+1. ~~Update meetingDate.service to work with either CEC or Metro District meetings.~~
+1. Update email links to go to a contact form, use a google function to build and send the email.
 1. Figure out unit testing in cypress
 1. Configure the cec page to tell when the next meeting is, to show who is currently on the board, to share covenant doc, arc request doc, 
 1. Configure the dicstrict page to say who is on the board, add the covenant controlling documents, describe what the difference between a MD and HOA are.

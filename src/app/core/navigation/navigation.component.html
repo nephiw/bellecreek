@@ -18,7 +18,7 @@
         <a mat-button routerLink="/events"> Events </a>
       </div>
     </mat-toolbar-row>
-    <mat-toolbar-row *ngIf="viewTitle$ | async as title">
+    <mat-toolbar-row id="pageTitle" *ngIf="viewTitle$ | async as title" class="mat-elevation-z3">
       <h2>{{ title }}</h2>
     </mat-toolbar-row>
   </mat-toolbar>

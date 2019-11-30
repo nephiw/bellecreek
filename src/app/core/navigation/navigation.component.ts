@@ -10,7 +10,7 @@ import { filter, map } from 'rxjs/operators';
 export class NavigationComponent {
   public viewTitle$ = this.router.events.pipe(
     filter(event => event instanceof NavigationEnd),
-    map(() => this.getRouteTitle(this.route.firstChild))
+    map(() => this.getRouteTitle(this.route))
   );
 
   constructor(

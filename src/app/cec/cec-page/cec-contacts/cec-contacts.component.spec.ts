@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CecContactsComponent } from './cec-contacts.component';
+import { MockComponents } from 'ng-mocks';
+import { ContactCardComponent } from '@app/shared/contact-card';
+import { ContactGroupCardComponent } from '@app/shared/contact-group-card';
 
 describe('CecContactsComponent', () => {
   let component: CecContactsComponent;
@@ -8,9 +11,11 @@ describe('CecContactsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CecContactsComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        CecContactsComponent,
+        MockComponents(ContactCardComponent, ContactGroupCardComponent)
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

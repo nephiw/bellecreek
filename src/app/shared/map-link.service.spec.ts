@@ -1,12 +1,39 @@
-import { TestBed } from '@angular/core/testing';
-
 import { MapLinkService } from './map-link.service';
 
 describe('MapLinkService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: MapLinkService;
+  let mockWindow: any;
 
-  it('should be created', () => {
-    const service: MapLinkService = TestBed.get(MapLinkService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    mockWindow = { navigator: { platform: '' } };
+    service = new MapLinkService(mockWindow);
+  });
+
+  it('uses the maps protocol for iPad', () => {
+    mockWindow.navigator.platform = 'iPad';
+    expect(service.getMapUri('1600 Amphitheatre Parkway')).toBe(
+      'maps://maps.google.com/?q=1600%20Amphitheatre%20Parkway'
+    );
+  });
+
+  it('uses the maps protocol for iPhone', () => {
+    mockWindow.navigator.platform = 'iPhone';
+    expect(service.getMapUri('1600 Amphitheatre Parkway')).toBe(
+      'maps://maps.google.com/?q=1600%20Amphitheatre%20Parkway'
+    );
+  });
+
+  it('uses the maps protocol for iPod', () => {
+    mockWindow.navigator.platform = 'iPod';
+    expect(service.getMapUri('1600 Amphitheatre Parkway')).toBe(
+      'maps://maps.google.com/?q=1600%20Amphitheatre%20Parkway'
+    );
+  });
+
+  it('uses the https protocol for other things', () => {
+    mockWindow.navigator.platform = 'Android';
+    expect(service.getMapUri('1600 Amphitheatre Parkway')).toBe(
+      'https://maps.google.com/?q=1600%20Amphitheatre%20Parkway'
+    );
   });
 });

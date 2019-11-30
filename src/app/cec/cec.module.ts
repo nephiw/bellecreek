@@ -5,7 +5,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from '@lib/shared.module';
 
 import { CecRoutingModule } from './cec-routing.module';
-import { MeetingDateService } from './meeting-date.service';
 import {
   CecPageComponent,
   CecIntroComponent,
@@ -21,7 +20,6 @@ import {
     SharedModule,
     MatGridListModule,
     MatDividerModule
-  ],
-  providers: [MeetingDateService]
+  ]
 })
 export class CecModule {}
