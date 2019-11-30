@@ -14,8 +14,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Cypress](https://www.cypress.io/).
+Run `ng test` to execute the unit tests jasmine/karma unit tests.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+Run `ng e2e` to execute the end-to-end tests, this will _eventually_ be configured for [Cypress](https://www.cypress.io/).
